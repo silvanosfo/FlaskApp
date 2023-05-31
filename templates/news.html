@@ -1,0 +1,24 @@
+{% include "header.html" %}
+{% block body %}
+    <div class="jumbotron" style="text-align: center;"><h1>Noticias ao Minuto</h1></div>
+        <div class="row">
+            {% for artigo in noticias %}
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                    <img src={{artigo.links[1].href}} alt="Imagem" width="260" height="172">
+                    <div class="caption">
+                        <b><a href={{artigo.link}}>{{artigo.title}}</a></b>
+                        <br>
+                        <b><u>{{artigo.category}}</u></b>
+                        <br>
+                        <p>{{artigo.description}}</p>
+                    </div>
+                    </div>
+                </div>
+            {% endfor  %}
+        </div>
+    </div>
+{% endblock %}
+
+
+

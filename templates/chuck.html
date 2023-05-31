@@ -1,0 +1,25 @@
+{% include "header.html" %}
+{% block body %}
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+</style>
+    <div class="jumbotron" style="text-align: center;"><h2>Random Joke</h2></div>
+        <div class="row">
+                <div class="center-block">
+                    <img class="center" src="https://images01.military.com/sites/default/files/styles/full/public/2021-04/chucknorris.jpeg.jpg" alt="Chuck">
+                    <div class="caption">
+                        <br>
+                        <p style="text-align: center;">{{chuck.joke}}</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
